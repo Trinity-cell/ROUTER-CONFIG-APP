@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Configuration Complete</title>
+    <style>
+        body {
+            background: black;
+            color: #00ffcc;
+            font-family: 'Courier New', monospace;
+            padding: 40px;
+        }
+
+        .terminal {
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 25px #00ffcc;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+        button {
+    padding: 10px;
+    background: #00ffcc;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+
+<h2>Generated Router Commands</h2>
+
+<div class="terminal">
+    <pre>
+{% for cmd in commands %}
+{{ cmd }}
+{% endfor %}
+    </pre>
+</div>
+<form action="/download" method="get">
+    <button type="submit">Download Configuration (.txt)</button>
+</form>
+
+</body>
+</html>
